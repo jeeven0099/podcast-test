@@ -9,7 +9,7 @@ jobs:
    - name:Setup Python
      uses:action/checkout@v4
      with:
-      pyhton-version:'3.10'
+       python-version:'3.10'
    - name:Install Dependencies
      run: |
       python -m pip intstall --upgrade pip
