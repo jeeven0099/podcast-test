@@ -4,18 +4,18 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-   - name:Checkout Repo
-     uses:actions/checkout@v3
-   - name:Setup Python
-     uses:action/checkout@v4
+   - name: Checkout Repo
+     uses: actions/checkout@v3
+   - name: Setup Python
+     uses: action/checkout@v4
      with:
-       python-version:'3.10'
-   - name:Install Dependencies
+       python-version: '3.10'
+   - name: Install Dependencies
      run: |
       python -m pip intstall --upgrade pip
       pip install pyyaml 
    - name: Run Feed Generator
-     run:python feed.py
+     run: python feed.py
    - name: Push Repo
      run: |
       git config user.name github-actions
